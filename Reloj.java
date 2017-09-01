@@ -30,9 +30,20 @@ public class Reloj
         return cadResultado;
     }
     
-    public void recorre()
+    /**
+     * Avanza el reloj.
+     */
+    public void tictoc()
     {
-        for(int h = horas; h < 24; h++)
+        horas++;
+        if(horas == 24)
         {
-            for(int m = minutos; m < 60; m++);
+            horas = 0;
+        }
+        minutos++;
+        if(minutos == 60)
+        {
+            minutos = 0;
+        }
+    }
 }
